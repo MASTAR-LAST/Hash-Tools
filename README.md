@@ -3,10 +3,17 @@ some of Hashing scripts and tools
 -----
 
 ### Files: 
-  - [Hashing.py](https://github.com/MASTAR-LAST/Hash-Tools/blob/main/Hashing.py)
+  - [Hashbat.py](http://example.com)
  
  
-## Hashing.py
+## Hashbat.py
 
-This file is made For Hashing a texts-numbers-urls-etc...,
-**Available Hash types: SHA-1** 
+This file is made For Hashing a texts-numbers-urls-files-etc...,
+
+### Available Hash types: 
+  - **SHA-1**
+  - **SHA-224**
+  - **SHA-256**
+  - **SHA-384**
+  - **SHA-512**
+  - **MD5** 
