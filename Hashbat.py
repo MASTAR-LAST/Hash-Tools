@@ -44,15 +44,20 @@ def hash_file(filename, hash_type = 'sha1'):
         elif hash_type.lower() in ['md5', '6']:       
              hash = hl.md5()
 
+        try:
+            with open(filename,'rb') as file:
 
-        with open(filename,'rb') as file:
+                chunk: int = 0
+                while chunk != b'':
+                    chunk = file.read(1024)
+                    hash.update(chunk)
 
-            chunk: int = 0
-            while chunk != b'':
-                chunk = file.read(1024)
-                hash.update(chunk)
-
-        return hash.hexdigest()
+            return hash.hexdigest()
+        
+        except FileNotFoundError:
+             print(f"""{Fore.LIGHTRED_EX}The file you entered does not exist
+Please verify that the path you entered is correct""")
+             sys.exit(1)
 
 #   This function was biuld to get the hash for text but ...
 def hash_blane():
